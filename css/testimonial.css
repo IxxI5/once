@@ -1,0 +1,61 @@
+/* prevent content of touching the body border */
+.testimonials {
+  padding: 0.3rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* flex container */
+.card .card-container {
+  display: flex;
+}
+
+/* testimonial image styling */
+.card-container img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+/* show pointer over thumbs up */
+.testimonial-container .like {
+  cursor: pointer;
+}
+
+/* on hover, change the color to green */
+.testimonial-container .like:hover {
+  color: green;
+}
+
+/* testimonial card styling */
+.testimonial-container .card {
+  background-color: rgb(213 225 243);
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid black;
+}
+
+/* limit testimonial width and center it on screen */
+.testimonial-container {
+  width: 720px;
+  margin: auto;
+}
+
+/* profession styling */
+.testimonial-container .card-container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* block quote styling */
+blockquote {
+  margin-left: 0;
+}
+
+/* on max-width < 720px apply mobile styling */
+@media screen and (max-width: 720px) {
+  .testimonial-container {
+    padding-right: 2rem;
+  }
+}

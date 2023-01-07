@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Ioannis Xydous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Accessing FFHS Web API using a Responsive Web Site"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <title>Semesterarbeit</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Logo -->
+        <img src="img/logo.svg" alt="Company's logo" />
+        <!-- Burger Menu fa-rotate-0-->
+        <input type="checkbox" id="burger" />
+        <label for="burger">
+          <span class="fa fa-bars"></span>
+        </label>
+        <span id="selected">Contact</span>
+        <!-- Navigation options -->
+        <a href="products.html" class="nav-option">Products</a>
+        <a href="testimonials.html" class="nav-option">Testimonials</a>
+        <a href="feedback.html" class="nav-option">Feedback</a>
+        <a href="index.html" class="nav-option">About</a>
+        <a href="contact.html" class="nav-option active">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <!-- Contact -->
+      <div class="contact main-option">
+        <article class="card">
+          <form>
+            <h2>Contact Form</h2>
+            <div class="input-container">
+              <label for="name2">
+                <span class="fa fa-user icon"></span>
+              </label>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Name"
+                id="name2"
+                name="name2"
+                pattern="^([a-zA-Z '.-]{3,100})$"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="email2">
+                <span class="fa fa-envelope icon"></span>
+              </label>
+              <input
+                class="input-field"
+                type="email"
+                placeholder="Email"
+                id="email2"
+                name="email2"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                required
+              />
+            </div>
+            <p id="message"></p>
+            <h2>Subject</h2>
+            <textarea rows="4" cols="35" id="feedbackMessage2"></textarea>
+            <button id="contactBtn" type="submit" class="btn">Send</button>
+          </form>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <h3>Once In A Lifetime</h3>
+      <p>lifetimestrasse 123, 5000 Aarau</p>
+      <p>info@once.ch</p>
+    </footer>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

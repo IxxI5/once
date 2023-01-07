@@ -1,0 +1,100 @@
+/* prevent content of touching the body border */
+.products {
+  padding: 0.3rem;
+}
+
+/* product flex container */
+.product-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* limit image height */
+.product-container img {
+  width: 100%;
+  height: 300px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+}
+
+/* centered text */
+.product-container .center {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+/* show pointer over thumbs up */
+.product-container .like {
+  cursor: pointer;
+}
+
+/* on hover, change the color to green */
+.product-container .like:hover {
+  color: green;
+}
+
+/* limit container height */
+.product-container .container {
+  text-align: left;
+  background-color: white;
+  height: 500px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 1rem 0.3rem;
+  margin-top: -30px;
+}
+
+/* left, right arrows styling and fixed positioning */
+#left-arrow,
+#right-arrow {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 6rem;
+  width: 3rem;
+  font-size: 6rem;
+  cursor: pointer;
+  opacity: 0.3;
+  background-color: white;
+}
+
+/* left arrow positioning on the left of the flex container */
+#left-arrow {
+  left: 0;
+}
+
+/* right arrow positioning on the right of the flex container */
+#right-arrow {
+  right: 0;
+}
+
+/* on hover make arrows solid */
+#left-arrow:hover,
+#right-arrow:hover {
+  opacity: 1;
+}
+
+/* apply flex: 50% to all card under product-container */
+.product-container .card {
+  width: 100%;
+  height: 100%;
+  margin: 1px;
+  padding: 0 0.3rem;
+  flex: 1 0 50%;
+}
+
+/* on screen width < 720px apply mobile styling */
+@media screen and (max-width: 720px) {
+  .product-container .card {
+    padding-right: 1rem;
+    flex: 1 0 100%;
+  }
+}

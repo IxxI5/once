@@ -1,0 +1,86 @@
+/* prevent content of touching the body border */
+.contact {
+  padding: 0.3rem;
+  width: 100%;
+}
+
+/* limit form width and center it */
+.contact form {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* icons with blue background */
+.contact span.icon {
+  padding: 10px;
+  background: blue;
+  color: white;
+  min-width: 50px;
+  cursor: pointer;
+}
+
+/* flex container */
+.contact .input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* input type width */
+.contact .input-field {
+  width: 100%;
+}
+
+/* disable textarea resize */
+.contact textarea {
+  resize: none;
+  width: 100%;
+}
+
+/* button styling */
+.contact button {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* on hover, make the button solid */
+.contact button:hover {
+  opacity: 1;
+}
+
+/* on disabled button show the stop symbol */
+.contact button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/*  disable outline on focus */
+input {
+  outline: none;
+}
+
+/* message padding */
+#message2 {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+/*  on invalid input, apply red color message */
+#message2.invalid {
+  color: red;
+}
+
+/*  on invalid input, apply red border on input */
+#name2.invalid,
+#email2.invalid {
+  border: 2px solid red;
+}
+
+/*  on valid input, apply green border on input */
+#name2.valid,
+#email2.valid {
+  border: 2px solid green;
+}

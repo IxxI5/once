@@ -1,0 +1,104 @@
+/* prevent content of touching the body border */
+.feedback {
+  padding: 0.3rem;
+  width: 100%;
+}
+
+/* limit form width and center it */
+.feedback form {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* icons with blue background */
+.feedback span.icon {
+  padding: 10px;
+  background: blue;
+  color: white;
+  min-width: 50px;
+  cursor: pointer;
+}
+
+/* pointer on stars */
+.feedback span.fa-star {
+  text-align: center;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* flex container */
+.feedback .input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* input type width */
+.feedback .input-field {
+  width: 100%;
+}
+
+/* disable textarea resize */
+.feedback textarea {
+  resize: none;
+  width: 100%;
+}
+
+/* button styling */
+.feedback button {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* on hover, make the button solid */
+.feedback button:hover {
+  opacity: 1;
+}
+
+/* on disabled button show the stop symbol */
+.feedback button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/*  disable outline on focus */
+input {
+  outline: none;
+}
+
+/* message padding */
+#message1 {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+/*  on invalid input, apply red color message */
+#message1.invalid {
+  color: red;
+}
+
+/*  on invalid input, apply red border on input */
+#name1.invalid,
+#email1.invalid {
+  border: 2px solid red;
+}
+
+/*  on valid input, apply green border on input */
+#name1.valid,
+#email1.valid {
+  border: 2px solid green;
+}
+
+/* star color */
+.starcolor {
+  color: orange;
+}
+
+/* align all stars to div center */
+.cstars,
+.dstars {
+  margin: auto;
+}

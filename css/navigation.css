@@ -1,0 +1,188 @@
+/* global selector */
+* {
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+/* body selector */
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* header: sticky */
+header {
+  background-color: #f1f1f1;
+  position: sticky;
+  width: 100%;
+  height: 5.5rem;
+  top: 0;
+  right: 0;
+}
+
+/* footer: fixed */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  line-height: 0;
+  height: 5.5rem;
+  left: 0;
+  bottom: 0;
+}
+
+/* img (logo): adjust size */
+header img {
+  width: 9rem;
+  height: 5.5rem;
+}
+
+/* nav: flex container */
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* a: remove default styling */
+header nav a {
+  text-decoration: none;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+}
+
+/* a: highlight on hover */
+header nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* a: change background when active */
+header nav a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* burger icon: positioning Note: display: none, works only over fa-bars */
+span.fa-bars {
+  display: none;
+  position: relative;
+  bottom: 70px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* selected nav-option */
+#selected {
+  position: absolute;
+  left: 200px;
+  bottom: 20px;
+  background-color: dodgerblue;
+  color: white;
+  width: 60%;
+  padding: 0.5rem;
+  display: none;
+}
+
+/* burger checkbox: remove from DOM */
+nav input {
+  display: none;
+}
+
+/* on checked burger, show all <a> under <nav> */
+#burger:checked + label ~ a {
+  display: inline-block;
+}
+
+/* shrink the label dimensions -> keeps header height constant */
+#burger + label {
+  height: 0;
+  width: 0;
+}
+
+/* on checked, change fa-bars to fa-close */
+#burger:checked + label > span.fa-bars::before {
+  content: "\f00d";
+}
+
+/* main space */
+main {
+  background-color: aliceblue;
+  padding-bottom: 10rem;
+}
+
+/* alert */
+.alert {
+  position: fixed;
+  top: 50%;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  width: 100%;
+  opacity: 0.8;
+  text-align: center;
+}
+/* spinner */
+.spinner {
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3450db;
+  border-bottom: 16px solid #3450db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+/* spinner frames */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* on max-width < 720px apply mobile styling */
+@media screen and (max-width: 720px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* burger menu list is initially closed */
+  header nav a {
+    width: 100%;
+    display: none;
+  }
+
+  /* on checked burger, show all <a> under <nav> */
+  #burger:checked + label ~ a {
+    display: inline-block;
+  }
+
+  /* display selected nav-option */
+  #selected {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  /* show burger icon */
+  span.fa-bars {
+    display: inline-block;
+    margin-left: 650px;
+  }
+
+  /* prevent resizing below 720px width */
+  html,
+  body {
+    width: 720px;
+  }
+}

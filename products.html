@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Ioannis Xydous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Accessing FFHS Web API using a Responsive Web Site"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <title>Semesterarbeit</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Logo -->
+        <img src="img/logo.svg" alt="Company's logo" />
+        <!-- Burger Menu fa-rotate-0-->
+        <input type="checkbox" id="burger" />
+        <label for="burger">
+          <span class="fa fa-bars"></span>
+        </label>
+        <span id="selected">Products</span>
+        <!-- Navigation options -->
+        <a href="products.html" class="nav-option active">Products</a>
+        <a href="testimonials.html" class="nav-option">Testimonials</a>
+        <a href="feedback.html" class="nav-option">Feedback</a>
+        <a href="index.html" class="nav-option">About</a>
+        <a href="contact.html" class="nav-option">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <!-- Products -->
+      <div class="products main-option">
+        <!-- left arrow -->
+        <span id="left-arrow" class="fas fa-angle-left"></span>
+        <div class="product-container">
+          <div class="spinner"></div>
+          <!-- inject product articles as HTML over JS -->
+        </div>
+        <!-- right arrow -->
+        <span id="right-arrow" class="fas fa-angle-right"></span>
+      </div>
+    </main>
+    <footer>
+      <h3>Once In A Lifetime</h3>
+      <p>lifetimestrasse 123, 5000 Aarau</p>
+      <p>info@once.ch</p>
+    </footer>
+    <script type="module" src="js/webapi.js"></script>
+    <script type="module" src="js/products.js"></script>
+  </body>
+</html>

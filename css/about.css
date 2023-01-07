@@ -1,0 +1,40 @@
+/* prevent content of touching the body border */
+.about {
+  padding: 0.3rem;
+}
+
+/* container styling */
+.about .container {
+  padding: 0 16px;
+}
+
+/* card styling */
+.about .card {
+  box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
+  margin: 8px;
+  background-color: white;
+  width: 33%;
+  font-size: 1rem;
+}
+
+/* image styling */
+.about img {
+  width: 100%;
+}
+
+/* about flex container */
+.about-container {
+  display: flex;
+}
+
+/* on screen width < 720px apply mobile styling */
+@media screen and (max-width: 720px) {
+  .about-container {
+    flex-direction: column;
+    padding-right: 2rem;
+  }
+
+  .about .card {
+    width: 100%;
+  }
+}
